@@ -2,7 +2,7 @@ FROM php:7.1-alpine
 
 LABEL maintainer="Albert Colom <skolom@gmail.com>"
 
-COPY /alpine-php/scripts/*.sh /tmp/
+COPY ./alpine-php/scripts/*.sh /tmp/
 RUN chmod +x /tmp/*.sh
 
 RUN bash ./packages.sh \
