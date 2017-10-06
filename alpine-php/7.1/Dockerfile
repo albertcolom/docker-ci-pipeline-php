@@ -4,7 +4,7 @@ LABEL maintainer="Albert Colom <skolom@gmail.com>"
 
 WORKDIR /tmp
 
-COPY ./alpine-php/scripts/*.sh /tmp/
+COPY /alpine-php/scripts/*.sh /tmp/
 RUN chmod +x /tmp/*.sh
 
 RUN bash ./packages.sh \
