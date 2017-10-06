@@ -2,14 +2,16 @@ FROM php:7.1-alpine
 
 LABEL maintainer="Albert Colom <skolom@gmail.com>"
 
-RUN apk --update add bash
+RUN apk --update \
+    curl \
+    git \
+    grep \
+    openssl-dev \
+    openssh-client \
+    rsync \
+    sudo
+    && rm -rf /var/cache/apk/*
 
-WORKDIR /tmp
-
-ADD ./alpine-php/scripts/*.sh /tmp/
-RUN chmod +x /tmp/*.sh
-
-RUN bash ./packages.sh \
-    && bash ./composer.sh
+RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/bin/ --filename=composer
 
 WORKDIR /var/www/html
