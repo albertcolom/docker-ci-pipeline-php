@@ -4,10 +4,12 @@ LABEL maintainer="Albert Colom <skolom@gmail.com>"
 
 RUN apk --update add bash
 
-COPY ./alpine-php/scripts/*.sh /tmp/
+WORKDIR /tmp
+
+ADD ./alpine-php/scripts/*.sh /tmp/
 RUN chmod +x /tmp/*.sh
 
-RUN bash /tmp/packages.sh \
-    && bash /tmp/composer.sh
+RUN bash ./packages.sh \
+    && bash ./composer.sh
 
 WORKDIR /var/www/html
