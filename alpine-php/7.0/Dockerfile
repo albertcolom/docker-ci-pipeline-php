@@ -3,6 +3,7 @@ FROM php:7.0-alpine
 LABEL maintainer="Albert Colom <skolom@gmail.com>"
 
 RUN apk --update add \
+    bash \
     curl \
     git \
     grep \
