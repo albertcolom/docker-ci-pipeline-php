@@ -10,6 +10,7 @@ RUN apk --update add \
     openssl-dev \
     openssh-client \
     rsync \
+    gzip \
     sudo \
     && rm -rf /var/cache/apk/*
 
