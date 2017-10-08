@@ -9,30 +9,24 @@ jobs:
     - stage: Build docker fpm-php 7.1
       script:
       - docker build -t fpm-php_7.1 -f fpm-php/7.1/Dockerfile .
-      - docker run -d --name fpm-php_7.1-app fpm-php_7.1
-      - docker ps -a | grep fpm-php_7.1-app
+      - docker run --rm --name fpm-php_7.1-app fpm-php_7.1 php --version | grep "PHP 7.1"
     - stage: Build docker fpm-php 7.0
       script:
       - docker build -t fpm-php_7.0 -f fpm-php/7.0/Dockerfile .
-      - docker run -d --name fpm-php_7.0-app fpm-php_7.0
-      - docker ps -a | grep fpm-php_7.0-app
+      - docker run --rm --name fpm-php_7.0-app fpm-php_7.0 php --version | grep "PHP 7.0"
     - stage: Build docker fpm-php 5.6
       script:
       - docker build -t fpm-php_5.6 -f fpm-php/5.6/Dockerfile .
-      - docker run -d --name fpm-php_5.6-app fpm-php_5.6
-      - docker ps -a | grep fpm-php_5.6-app
+      -docker run --rm --name fpm-php_5.6-app fpm-php_5.6 php --version | grep "PHP 5.6"
     - stage: Build docker alpine-php 7.1
       script:
       - docker build -t alpine-php_7.1 -f alpine-php/7.1/Dockerfile .
-      - docker run -d --name alpine-php_7.1-app alpine-php_7.1
-      - docker ps -a | grep alpine-php_7.1-app
+      - docker run --rm --name alpine-php_7.1-app alpine-php_7.1 php --version | grep "PHP 7.1"
     - stage: Build docker alpine-php 7.0
       script:
       - docker build -t alpine-php_7.0 -f alpine-php/7.0/Dockerfile .
-      - docker run -d --name alpine-php_7.0-app alpine-php_7.0
-      - docker ps -a | grep alpine-php_7.0-app
+      - docker run --rm --name alpine-php_7.0-app alpine-php_7.0 php --version | grep "PHP 7.0"
     - stage: Build docker alpine-php 5.6
       script:
       - docker build -t alpine-php_5.6 -f alpine-php/5.6/Dockerfile .
-      - docker run -d --name alpine-php_5.6-app alpine-php_5.6
-      - docker ps -a | grep alpine-php_5.6-app
+      - docker run --rm --name alpine-php_5.6-app alpine-php_5.6 php --version | grep "PHP 5.6"
