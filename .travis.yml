@@ -1,0 +1,15 @@
+sudo: true
+
+dist: trusty
+
+jobs:
+  include:
+    - stage: build docker alpine-php 7.1
+      script:
+      - docker build -t alpine-php_7.1 -f alpine-php/7.1/Dockerfile .
+    - stage: build docker alpine-php 7.0
+      script:
+      - docker build -t alpine-php_7.0 -f alpine-php/7.0/Dockerfile .
+    - stage: build docker alpine-php 5.6
+      script:
+      - docker build -t alpine-php_5.6 -f alpine-php/5.6/Dockerfile .
