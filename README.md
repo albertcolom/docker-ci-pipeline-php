@@ -1,4 +1,4 @@
-[![](https://img.shields.io/docker/pulls/albertcolom/ci-pipeline-php.svg)](https://hub.docker.com/r/albertcolom/ci-pipeline-php/ "Click to view the image on Docker Hub")
+[![](https://img.shields.io/docker/pulls/albertcolom/ci-pipeline-php.svg)](https://hub.docker.com/r/albertcolom/ci-pipeline-php/ "Click to view the image on Docker Hub") [![Build Status](https://travis-ci.org/albertcolom/docker-ci-pipeline-php.svg?branch=master)](https://travis-ci.org/albertcolom/docker-ci-pipeline-php)
 
 ### Supported tags and respective `Dockerfile` links
 
