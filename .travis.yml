@@ -6,6 +6,18 @@ language: php
 
 jobs:
   include:
+    - stage: Build docker php 7.1
+      script:
+      - docker build -t php_7.1 -f php/7.1/Dockerfile .
+      - docker run --rm --name php_7.1-app php_7.1 php --version | grep "PHP 7.1"
+    - stage: Build docker php 7.0
+      script:
+      - docker build -t php_7.0 -f php/7.0/Dockerfile .
+      - docker run --rm --name php_7.0-app php_7.0 php --version | grep "PHP 7.0"
+    - stage: Build docker php 5.6
+      script:
+      - docker build -t php_5.6 -f php/5.6/Dockerfile .
+      - docker run --rm --name php_5.6-app php_5.6 php --version | grep "PHP 5.6"
     - stage: Build docker fpm-php 7.1
       script:
       - docker build -t fpm-php_7.1 -f fpm-php/7.1/Dockerfile .
