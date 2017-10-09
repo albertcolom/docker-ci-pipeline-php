@@ -18,3 +18,7 @@
 - [Simple pipeline example](https://github.com/albertcolom/example-pipeline/blob/master/Bitbucket/simple-pipeline-example/bitbucket-pipelines.yml)
 - [Differents images pipeline example](https://github.com/albertcolom/example-pipeline/blob/master/Bitbucket/differents-images-pipeline-example/bitbucket-pipelines.yml)
 - [Differents branchs pipeline example](https://github.com/albertcolom/example-pipeline/blob/master/Bitbucket/differents-branchs-pipeline-example/bitbucket-pipelines.yml)
+
+#### GitLab examples `.gitlab-ci.yml`
+- [Simple pipeline example](https://github.com/albertcolom/example-pipeline/blob/master/GitLab/simple-pipeline-example/.gitlab-ci.yml)
+- [Differents images pipeline example](https://github.com/albertcolom/example-pipeline/blob/master/GitLab/differents-images-pipeline-example/.gitlab-ci.yml)
