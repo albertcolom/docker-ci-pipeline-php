@@ -14,8 +14,7 @@
 
 ### Pipelines examples
 
-#### GitLab examples `.gitlab-ci.yml`:
-- Simple example
-
-#### Bitbucket examples `.bitbucket-pipelines.yml`:
-- Simple example
+#### Bitbucket examples `.bitbucket-pipelines.yml`
+- [Simple pipeline example](https://github.com/albertcolom/example-pipeline/blob/master/Bitbucket/simple-pipeline-example/bitbucket-pipelines.yml)
+- [Differents images pipeline example](https://github.com/albertcolom/example-pipeline/blob/master/Bitbucket/differents-images-pipeline-example/bitbucket-pipelines.yml)
+- [Differents branchs pipeline example](https://github.com/albertcolom/example-pipeline/blob/master/Bitbucket/differents-branchs-pipeline-example/bitbucket-pipelines.yml)
